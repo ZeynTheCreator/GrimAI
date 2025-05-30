@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grim AI</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.14.0"
+        }
+      }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>Grim AI</h1>
+            <div class="controls">
+                <div class="mode-selector-container">
+                    <label for="ai-mode-select" class="sr-only">AI Mode:</label>
+                    <select id="ai-mode-select" aria-label="Select AI Personality Mode">
+                        <option value="normal">Normal</option>
+                        <option value="angry">Angry</option>
+                        <option value="happy">Happy</option>
+                        <option value="thinker">Thinker</option>
+                    </select>
+                </div>
+                <button id="fullscreen-toggle" aria-label="Toggle fullscreen" title="Toggle fullscreen">↗️</button>
+                <button id="theme-toggle" aria-label="Toggle theme">☀️</button> 
+            </div>
+        </header>
+        <main id="chat-area">
+            <div id="chat-messages">
+                <!-- Messages will be appended here -->
+            </div>
+        </main>
+        <footer id="input-area">
+            <div id="file-preview-container"></div>
+            <div class="input-controls">
+                <button id="file-input-button" aria-label="Attach file" title="Attach file">📎</button>
+                <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp,text/plain,.pdf,.md,.js,.py,.html,.css,.json" style="display: none;">
+                <textarea id="chat-input" placeholder="Ask Grim AI anything..." aria-label="Chat input"></textarea>
+                <button id="send-button" aria-label="Send message" title="Send message">➢</button>
+                <button id="voice-button" aria-label="Use voice input" title="Use voice input">🎤</button>
+            </div>
+            <div class="footer-controls">
+                <button id="clear-chat-button" aria-label="Clear chat">Clear Chat</button>
+                <button id="speak-toggle-button" aria-label="Toggle speak AI responses" title="Toggle AI speech">🔊</button>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
